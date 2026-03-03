@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ParaPaquetes Print Studio — Design System
+   Primary: deep navy blue  #1a365d → HSL(214, 56%, 24%)
+   Accent:  vibrant orange  #ed8936 → HSL(30, 83%, 57%)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Brand */
+    --brand-primary:   214 56% 24%;   /* #1a365d */
+    --brand-accent:    30 83% 57%;    /* #ed8936 */
+    --brand-light:     214 56% 96%;
+
+    /* Surfaces */
+    --background: 210 20% 98%;
+    --foreground: 214 56% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 214 56% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 56% 12%;
+
+    /* Shadcn tokens mapped to brand */
+    --primary: 214 56% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 56% 96%;
+    --secondary-foreground: 214 56% 24%;
+
+    --muted: 214 30% 94%;
+    --muted-foreground: 214 20% 48%;
+
+    --accent: 30 83% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 30 83% 57%;
+
+    --radius: 0.625rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(214 56% 14%), hsl(214 56% 28%));
+    --gradient-accent: linear-gradient(135deg, hsl(30 83% 57%), hsl(30 83% 45%));
+
+    /* Shadows */
+    --shadow-brand: 0 8px 32px -8px hsl(214 56% 24% / 0.35);
+    --shadow-accent: 0 8px 24px -6px hsl(30 83% 57% / 0.45);
+
+    --sidebar-background: 214 56% 18%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 30 83% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 56% 28%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 214 40% 30%;
+    --sidebar-ring: 30 83% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+/* Utility classes using design tokens */
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .shadow-brand {
+    box-shadow: var(--shadow-brand);
+  }
+  .shadow-accent-glow {
+    box-shadow: var(--shadow-accent);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
